@@ -40,6 +40,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Update="Content\City.tmx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Content\Kenney Game Assets (version 41)\Audio\Alpha Dance.ogg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -80,6 +83,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Content\Kenney Game Assets (version 41)\Audio\Time Driving.ogg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\TitleScreen.tmx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
