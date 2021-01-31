@@ -63,6 +63,33 @@ namespace GGJ_2021
 				_Timespan += gameTime.ElapsedGameTime;
 		}
 
+		public List<Card> CopyDeck()
+		{
+			List<Card> results = new List<Card>();
+
+			foreach(var card in _DeckOfCards)
+			{
+				results.Add(card.Clone());
+			}
+
+			return results;
+		}
+
+		//Moved to battle manager
+
+		//Random _Random = new Random();
+		//internal List<Card> GetCards(int numCards)
+		//{
+		//	List<Card> results = new List<Card>();
+		//	for(int x = 0; x < numCards; x++)
+		//	{
+		//		int index = _Random.Next(0, _DeckOfCards.Count);
+		//		results.Add(_DeckOfCards[index].Clone());
+		//	}
+
+		//	return results;
+		//}
+
 		public void BattleUpdate(GameTime gameTime, KeyboardState keyState, MouseState mouseState)
 		{
 			if(_IsPlayer)

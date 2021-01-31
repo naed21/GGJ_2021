@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Audio;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -48,7 +49,7 @@ namespace GGJ_2021
 						Instance = soundEffect.CreateInstance(),
 						SoundEffect = soundEffect,
 						Name = name == "" ? soundEffect.Name : name,
-						Volume = 1f
+						Volume = MasterVolume
 					};
 
 					if (!SoundEffectLibrary.ContainsKey(soundType))
@@ -59,12 +60,60 @@ namespace GGJ_2021
 			}
 		}
 
-		public void Update(TimeSpan elapsedGameTime)
+		TimeSpan _TimeSpan = TimeSpan.Zero;
+		TimeSpan _StepSpeed = new TimeSpan(0, 0, 0, 0, milliseconds: 100);
+		float _TotalSteps = 10;
+		//int _CurrentStep = 0;
+		public void Update(GameTime gameTime)
 		{
 			/*
 			 * Manage background music and effects
 			 * Allow background music to transition between tracks
 			 */
+
+			if(TargetWrapper != null)
+			{
+				if(ActiveWrapper == null)
+				{
+					ActiveWrapper = TargetWrapper;
+					ActiveWrapper.Instance.Play();
+					TargetWrapper = null;
+				}
+
+				_TimeSpan += gameTime.ElapsedGameTime;
+				if (_TimeSpan.TotalMilliseconds >= _StepSpeed.TotalMilliseconds)
+				{
+					float stepSize = MasterVolume / _TotalSteps;
+					if (ActiveWrapper.Instance.Volume - stepSize <= 0)
+						ActiveWrapper.Instance.Volume = 0f;
+					else
+						ActiveWrapper.Instance.Volume -= stepSize;
+
+					if (ActiveWrapper.Instance.Volume <= 0f)
+					{
+						ActiveWrapper.Instance.Stop();
+						TargetWrapper.Instance.Volume = MasterVolume;
+						TargetWrapper.Instance.Play();
+						ActiveWrapper = TargetWrapper;
+						TargetWrapper = null;
+					}
+				}
+			}
+		}
+
+		SoundEffectWrapper ActiveWrapper;
+		SoundEffectWrapper TargetWrapper;
+
+		Random _Rand = new Random();
+		public void Play(SoundType sType)
+		{
+			var available = SoundEffectLibrary[sType];
+			if(available.Count > 0)
+			{
+				var index = _Rand.Next(0, available.Count);
+				available[index].Instance.IsLooped = true;
+				TargetWrapper = available[index];
+			}
 		}
 
 		private static void ConvertOggToWaveStream(string oggFilePath, BinaryWriter writer, Stream output)

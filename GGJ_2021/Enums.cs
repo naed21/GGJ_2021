@@ -23,6 +23,14 @@ namespace GGJ_2021
 		CityLevelSettings
 	}
 
+	public enum BattleState
+	{
+		Draw,
+		Select, //select out of the cards
+		Compare, //Show AI selection and the +- points
+		Result //If battle ends, show who won
+	}
+
 	public enum FaceDirection
 	{
 		Up,

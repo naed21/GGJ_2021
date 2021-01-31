@@ -22,7 +22,72 @@ namespace GGJ_2021
 			if(id == 0)
 			{
 				//custom card deck
-				
+				//Character has a balanced deck
+				//-> 4 of each type
+				result.CreateStartingDeck(new List<Card>
+				{
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+				});
+
 				result.TotalFrames = 3;
 				var left = new List<Rectangle>
 				{
@@ -55,6 +120,72 @@ namespace GGJ_2021
 			}
 			else if(id == 1)
 			{
+				//Character really likes rocks
+				//Swap 1 paper and scissor for rocks
+				result.CreateStartingDeck(new List<Card>
+				{
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+				});
+
 				result.TotalFrames = 3;
 				var left = new List<Rectangle>
 				{
@@ -87,6 +218,72 @@ namespace GGJ_2021
 			}
 			else if (id == 2)
 			{
+				//Character really likes scissors
+				//Swap rock and paper for scissors
+				result.CreateStartingDeck(new List<Card>
+				{
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+				});
+
 				result.TotalFrames = 3;
 				var left = new List<Rectangle>
 				{
@@ -119,6 +316,72 @@ namespace GGJ_2021
 			}
 			else if (id == 3)
 			{
+				//Character really likes paper
+				//Swap rock and scissor for paper
+				result.CreateStartingDeck(new List<Card>
+				{
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+				});
+
 				result.TotalFrames = 3;
 				var left = new List<Rectangle>
 				{
@@ -151,6 +414,72 @@ namespace GGJ_2021
 			}
 			else if (id == 4)
 			{
+				//Balanced Deck, but all lvl 2
+				//One of each type is lvl 3
+				result.CreateStartingDeck(new List<Card>
+				{
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 3,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 2,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 2,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 2,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 3,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 2,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 2,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 2,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 3,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 2,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 2,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 2,
+					},
+				});
+
 				result.TotalFrames = 3;
 				var left = new List<Rectangle>
 				{
@@ -183,6 +512,71 @@ namespace GGJ_2021
 			}
 			else if (id == 5)
 			{
+				//All Balanced, idk what special to do
+				result.CreateStartingDeck(new List<Card>
+				{
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Rock,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Paper,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+					new Card
+					{
+						CardType = CardType.Scissor,
+						Level = 1,
+					},
+				});
+
 				result.TotalFrames = 3;
 				var left = new List<Rectangle>
 				{

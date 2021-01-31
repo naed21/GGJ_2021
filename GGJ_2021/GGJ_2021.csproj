@@ -85,6 +85,15 @@
     <None Update="Content\Kenney Game Assets (version 41)\Audio\Time Driving.ogg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Content\PaperCard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\RockCard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ScissorCard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Content\TitleScreen.tmx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -30,7 +30,7 @@ using SharpFont.Gdi;
 
 namespace GGJ_2021
 {
-	internal class FontService : IDisposable
+	public class FontService : IDisposable
 	{
 		private Library lib;
 
